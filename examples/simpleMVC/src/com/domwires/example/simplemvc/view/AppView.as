@@ -43,7 +43,7 @@ package com.domwires.example.simplemvc.view
 			firstNameLabel = createForm("First name:", layoutGroup, onFirstNameClicked);
 			lastNameLabel = createForm("Last name:", layoutGroup, onLastNameClicked);
 			ageLabel = createForm("Age:", layoutGroup, onAgeClicked);
-            nickNameLabel = createForm("Nickname:", layoutGroup, onNickNameClicked);
+			nickNameLabel = createForm("Nickname:", layoutGroup, onNickNameClicked);
 
 			viewContainer.addChild(layoutGroup);
 
@@ -70,7 +70,7 @@ package com.domwires.example.simplemvc.view
 
 		private function nickNameChanged(m:IMessage):void
 		{
-            nickNameLabel.text = model.nickName;
+			nickNameLabel.text = model.nickName;
 		}
 
 		private function createForm(label:String, group:LayoutGroup, onClick:Function):Label

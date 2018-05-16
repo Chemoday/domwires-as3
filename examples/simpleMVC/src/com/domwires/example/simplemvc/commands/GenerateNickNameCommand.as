@@ -16,15 +16,15 @@ package com.domwires.example.simplemvc.commands
 		{
 			super.execute();
 
-            var nickname:String;
-            var random_name:Number;
-            var random_surname:Number;
-            var name:Array = new Array("Hayman ","Junious ","Nathaniel ","Alvin ","Lashley ","Rolandus ", "Rolandus", "Albany");
-            var surname:Array = new Array("Beemer","Ingles","Geffer","Pariet","Knowlton","Riddel", "Todd");
-            random_name = Math.floor(Math.random() * name.length);
-            random_surname = Math.floor(Math.random() * surname.length);
-            nickname = name[random_name] + " " + surname[random_surname];
-			model.setNickName(nickname);
+			var nickName:String;
+			var randomName:Number;
+			var randomSurname:Number;
+			var name:Array = ["Hayman ", "Junious ", "Nathaniel ", "Alvin ", "Lashley ", "Rolandus ", "Rolandus", "Albany"];
+			var surName:Array = ["Beemer", "Ingles", "Geffer", "Pariet", "Knowlton", "Riddel", "Todd"];
+			randomName = Math.floor(Math.random() * name.length);
+			randomSurname = Math.floor(Math.random() * surname.length);
+			nickName = name[randomName] + " " + surName[randomSurname];
+			model.setNickName(nickName);
 
 			// Or i can just copy GenerateFirstNameCommand and use random string, but who cares?
 		}
