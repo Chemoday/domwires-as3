@@ -9,6 +9,7 @@ package com.domwires.example.simplemvc.model
 	{
 		private var _firstName:String;
 		private var _lastName:String;
+        private var _nickName:String;
 		private var _age:int;
 
 		public function setFirstName(value:String):IAppModel
@@ -38,6 +39,15 @@ package com.domwires.example.simplemvc.model
 			return this;
 		}
 
+        public function setNickName(value:String):IAppModel
+        {
+            _nickName = value;
+
+            dispatchMessage(AppModelMessage.NICKNAME_CHANGED, null, true);
+
+            return this;
+        }
+
 		public function get firstName():String
 		{
 			return _firstName;
@@ -47,6 +57,11 @@ package com.domwires.example.simplemvc.model
 		{
 			return _lastName;
 		}
+
+        public function get nickName():String
+        {
+            return _nickName;
+        }
 
 		public function get age():int
 		{
