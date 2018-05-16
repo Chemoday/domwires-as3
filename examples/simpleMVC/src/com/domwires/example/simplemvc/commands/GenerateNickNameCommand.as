@@ -22,7 +22,7 @@ package com.domwires.example.simplemvc.commands
 			var name:Array = ["Hayman ", "Junious ", "Nathaniel ", "Alvin ", "Lashley ", "Rolandus ", "Rolandus", "Albany"];
 			var surName:Array = ["Beemer", "Ingles", "Geffer", "Pariet", "Knowlton", "Riddel", "Todd"];
 			randomName = Math.floor(Math.random() * name.length);
-			randomSurname = Math.floor(Math.random() * surname.length);
+			randomSurname = Math.floor(Math.random() * surName.length);
 			nickName = name[randomName] + " " + surName[randomSurname];
 			model.setNickName(nickName);
 
